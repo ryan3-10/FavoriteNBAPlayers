@@ -87,7 +87,7 @@ main > section {
     grid-area: video;
     height: 464px;
     margin-left: 0;
-    width: 100
+    width: 100%;
 }
 
 nav {
@@ -147,6 +147,10 @@ button:active {
 
 /* Mobile grid */
 @media screen and (max-width: 600px) {
+    img {
+        margin: auto;
+    }
+    
     .player-details {
         grid-template-areas:
         "summary summary"
