@@ -1,0 +1,65 @@
+/* Changes made with new theme: 
+- Change background of body to plain grey
+- Remove the <nav> element, as it is irrelevant in this theme
+- Change the background of <h1> to a linear gradient of blue and cyan
+- Change all player name headers to have a background gradient of their respective team colors
+- Change the background of <main> sections to white with a border of blue
+- Change the color of the text in <main> sections to cyan
+- Change the border style of <main> sections to groove
+- Make all players display at the same time and hide the player buttons */
+
+body {
+   background-image: none;
+   background-color: grey;
+}
+
+nav {
+   display: none;
+}
+
+h1 {
+   background: linear-gradient(to right, #1E90FF, #00CED1);
+}
+
+h1, h2 {
+   padding: 0.2em;
+   color: white;
+   border: 2px solid grey;
+}
+
+h2 {
+   border-radius: 10px;
+   color: white;
+}
+
+#nikola-section > h2 {
+   background: linear-gradient(to right, midnightblue, yellow);
+}
+
+#kobe-section > h2 {
+   background: linear-gradient(to right, purple, gold);
+}
+
+#kyrie-section > h2 {
+   background: linear-gradient(to right, black, navy);
+}
+
+main > section {
+   background-color: white;
+   color: #00CED1;
+   border: 5px solid #1E90FF;
+   border-style: groove;
+}
+
+.home > .main-content {
+   display: none;
+}
+
+@media screen and (max-width: 600px) {
+   .player-details {
+       grid-template-areas:
+         "summary summary"
+         "image image"
+         "video video";
+   }
+}

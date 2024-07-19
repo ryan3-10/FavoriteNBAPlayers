@@ -1,0 +1,176 @@
+/* I did not receive feedback indicating any layout issues from my code,
+but I did move both my css and js files into their own folders to better organize
+my files as instructed in this assignemnt. I also ran through my main.css file to
+ensure that I was not using any floats or unnecessary height/width specifications.
+Outside of the CSS, I also refactored some of my main.js file by using the document.querySelectorAll()
+function. Previously, I was using document.getElementById() to get each element that I needed, but this
+refactoring simplifies that quite a bit. */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    background-image: url("../assets/background.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #ECF0F1;
+    padding: 2em;
+}
+
+main {
+    margin: auto;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+#title-line {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+#title-line > img {
+    width: 100px;
+}
+
+h1 {
+    font-size: 32px;
+}
+
+h1, h2 {
+    color: #1E90FF;
+}
+
+p {
+    font-size: 20px;
+}
+
+section {
+    border: 5px solid #00CED1;
+    padding: 2em;
+}
+
+iframe, img {
+    width: 100%;
+}
+
+iframe {
+    height: 100%;
+}
+
+main > section {
+    background-color: rgba(44, 62, 80, 0.9);
+}
+
+.player-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "summary image"
+        "video video";
+}
+
+.player-details > p {
+    grid-area: summary;
+}
+
+.image-container {
+    grid-area: image;
+}
+
+.video-container {
+    grid-area: video;
+    height: 464px;
+    margin-left: 0;
+    width: 100
+}
+
+nav {
+    display: flex;
+    gap: 1em;
+}
+
+#theme-button {
+    width: 100%;
+}
+
+button {
+    background-color: #1E90FF; 
+    color: #FFFFFF;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #00CED1;
+}
+
+button:active {
+    transform: scale(0.95);
+    background-color: #4682B4;
+}
+
+.player {
+    display: none;
+}
+
+/* Tablet grid */
+@media screen and (max-width: 800px) {
+    .player-details {
+        grid-template-areas:
+        "summary summary"
+        "image image"
+        "video video"
+    }
+
+    .image-container {
+        margin-left: 0;
+    }
+
+    #title-line {
+        gap: 0;
+        margin-bottom: 2em;
+    }
+
+    iframe, img {
+        width: 100%;
+    }
+}
+
+/* Mobile grid */
+@media screen and (max-width: 600px) {
+    .player-details {
+        grid-template-areas:
+        "summary summary"
+        "image image"
+        "video video";
+    }
+
+    body {
+        padding: 0;
+    }
+
+    main > section {
+        padding: 0.5em;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .video-container {
+        height: 150px;
+    }
+}
