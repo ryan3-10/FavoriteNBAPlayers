@@ -118,7 +118,7 @@ button:active {
     background-color: #4682B4;
 }
 
-.player {
+.hidden {
     display: none;
 }
 

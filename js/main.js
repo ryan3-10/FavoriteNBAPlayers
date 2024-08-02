@@ -3,18 +3,18 @@
 // website funcionality is not changed when changing themes. I've also added page.js and validation.js
 // files to my js folder in order to seperate the different functionalities that each one handles.
 
-const playerButtons = document.querySelectorAll(".player-button");
-const sections = document.querySelectorAll(".player");
+const showSectionButtons = document.querySelectorAll(".show-section");
+const hiddenSections = document.querySelectorAll(".hidden");
 
 function hideAllSections() {
-    for (section of sections) {
+    for (section of hiddenSections) {
         section.style.display = "none";
     }
 }
 
-for (let i = 0; i < playerButtons.length; i++) {
-    playerButtons[i].addEventListener("click", () => {
+for (let i = 0; i < showSectionButtons.length; i++) {
+    showSectionButtons[i].addEventListener("click", () => {
         hideAllSections();
-        sections[i].style.display = "block";
+        hiddenSections[i].style.display = "block";
     });
 }

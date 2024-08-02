@@ -9,5 +9,4 @@ themeButton.addEventListener("click", () => {
    else {
        head.innerHTML += '<link id="override-link" rel="stylesheet" href="./css/override.css">';
    }
-   hideAllSections();
 });
