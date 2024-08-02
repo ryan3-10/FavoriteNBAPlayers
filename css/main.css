@@ -209,4 +209,8 @@ input[type=text], input[type=email], input[type=number] {
     .video-container {
         height: 150px;
     }
+
+    textarea {
+        width: 100%;
+    }
 }
