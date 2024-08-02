@@ -13,11 +13,11 @@ body {
    background-color: grey;
 }
 
-button {
+button, input[type="submit"] {
    background-color: #00CED1;
 }
 
-button:hover {
+button:hover, input[type="submit"]:hover {
    background-color: #1E90FF; 
 }
 

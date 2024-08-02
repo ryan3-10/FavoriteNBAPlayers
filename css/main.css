@@ -99,7 +99,7 @@ nav {
     width: 100%;
 }
 
-button {
+button, input[type="submit"] {
     background-color: #1E90FF; 
     color: #FFFFFF;
     border: none;
@@ -109,7 +109,7 @@ button {
     border-radius: 5px;
 }
 
-button:hover {
+button:hover, input[type="submit"]:hover {
     background-color: #00CED1;
 }
 
@@ -121,6 +121,38 @@ button:active {
 .hidden {
     display: none;
 }
+
+label {
+    font-size: 1.5em;
+    display: block;
+    margin-bottom: 0.2em;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+#checkbox-div > p > label {
+    font-size: 1rem;
+    display: inline;
+}
+
+input[type=text], input[type=email], input[type=number] {
+    box-sizing: border-box;
+    width: 250px;
+    padding: 10px;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    width: 80%;
+ }
+
+ .error-message {
+    color: red;
+    font-size: 1em;
+    margin-top: 0.2em;
+ }
 
 /* Tablet grid */
 @media screen and (max-width: 800px) {

@@ -31,6 +31,7 @@ in a zero grade, a permanent record on file and possibly immediate failure of th
                         <button class="show-section" id="nikola-btn">Nikola Jokić</button>
                         <button class="show-section" id="kyrie-btn">Kyrie Irving</button>
                         <button class="show-section" id="kobe-btn">Kobe Bryant</button>
+                        <button class="show-section" id="form-btn">Visitor Form</button>
                     </nav>
                 </header>
                 <article class="main-content">
@@ -103,7 +104,72 @@ in a zero grade, a permanent record on file and possibly immediate failure of th
                     </figure>
                 </article>
             </section>
+            <section class="form hidden">
+                <form id="myform" novalidate>
+                    <div>
+                        <label for="first-name">First Name:</label>
+                        <input type="text" name="first-name" id="first-name" required>
+                    </div>
+                    <div>
+                        <label for="last-name">Last Name:</label>
+                        <input type="text" name="last-name" id="last-name" required>
+                    </div>
+                    <div>
+                        <label for="address">Address:</label>
+                        <input type="text" name="address" id="address" required>
+                    </div>
+                    <div>
+                        <label for="city">City:</label>
+                        <input type="text" name="city" id="city" required>
+                    </div>
+                    <div>
+                        <label for="state">State:</label>
+                        <input type="text" name="state" id="state" minlength="2" maxlength="2" required>
+                    </div>
+                    <div>
+                        <label for="zip">Zip Code:</label>
+                        <input type="number" name="zip" id="zip" required>
+                    </div>
+                    <div>
+                        <label for="phone">Phone Number:</label>
+                        <input type="text" name="phone" id="phone" required>
+                    </div>
+                    <div>
+                        <label for="email">Email Address:</label>
+                        <input type="email" name="email" id="email" required>
+                    </div>
+                    <div id="checkbox-div">
+                        <label for="how-find">How did you find this page?</label>
+                        <p>
+                            <input type="checkbox" name="ad" id="ad">
+                            <label for="ad">Ad</label>
+                        </p>
+                        <p>
+                            <input type="checkbox" name="friend" id="friend">
+                            <label for="friend">Friend</label>
+                        </p>
+                        <p>
+                            <input type="checkbox" name="school" id="school">
+                            <label for="school">School</label>                            
+                        </p>
+                        <p>
+                            <input type="checkbox" name="other" id="other">
+                            <label for="other">Other</label>                            
+                        </p>
+                    </div>
+                    <div>
+                        <label for="comments">Feel free to provide any feedback for this webpage:</label>
+                        <textarea rows="8" cols="50"></textarea>
+                    </div>
+                    <input type="submit" id="submitBtn">
+                </form>
+            </section>
+            <section class="hidden" id="thank-you">
+                <p>Thank you!</p>
+                <p>Your form has been submitted succesfully.</p>
+            </section>
         </main>
+        <script src="./js/validation.js"></script>
         <script src="./js/main.js"></script>
         <script src="./js/page.js"></script>
     </body>
