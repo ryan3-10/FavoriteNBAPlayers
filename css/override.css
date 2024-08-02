@@ -6,15 +6,19 @@
 - Change the background of <main> sections to white with a border of blue
 - Change the color of the text in <main> sections to cyan
 - Change the border style of <main> sections to groove
-- Make all players display at the same time and hide the player buttons */
+*/
 
 body {
    background-image: none;
    background-color: grey;
 }
 
-nav {
-   display: none;
+button {
+   background-color: #00CED1;
+}
+
+button:hover {
+   background-color: #1E90FF; 
 }
 
 h1 {
@@ -49,10 +53,6 @@ main > section {
    color: #00CED1;
    border: 5px solid #1E90FF;
    border-style: groove;
-}
-
-.home > .main-content {
-   display: none;
 }
 
 @media screen and (max-width: 600px) {

@@ -1,25 +1,10 @@
-const themeButton = document.getElementById("theme-button");
-const head = document.querySelector("head");
+// In my previous submission, it was suggested to me that I keep the nav bar on my secondary theme,
+// so I've made this change. The nav bar witht the player buttons is now on both themes, so that
+// website funcionality is not changed when changing themes. I've also added page.js and validation.js
+// files to my js folder in order to seperate the different functionalities that each one handles.
+
 const playerButtons = document.querySelectorAll(".player-button");
 const sections = document.querySelectorAll(".player");
-
-themeButton.addEventListener("click", () => {
-    let overrideLink = document.getElementById("override-link");
-    if (overrideLink) {
-        head.removeChild(overrideLink);
-        hideAllSections();
-    }
-    else {
-        head.innerHTML += '<link id="override-link" rel="stylesheet" href="./css/override.css">';
-        displayAllSections();
-    }
-});
-
-function displayAllSections() {
-    for (section of sections) {
-        section.style.display = "block";
-    }
-}
 
 function hideAllSections() {
     for (section of sections) {
